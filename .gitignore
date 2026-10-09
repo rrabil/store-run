@@ -1,1 +1,8 @@
 /private/
+
+# Jekyll (docs site) build output, local to the actions runner / local builds
+/_site/
+docs/_site/
+docs/.jekyll-cache/
+docs/.bundle/
+docs/vendor/

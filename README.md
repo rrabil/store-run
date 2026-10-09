@@ -71,8 +71,28 @@ week's JSON. If you're cloning this repo fresh, `/private` won't exist until you
 ## Deployment
 
 Deploys to GitHub Pages via `.github/workflows/deploy-pages.yml` on every push to `main`.
+The app is published at the site root; a separate Jekyll-built docs site (see below) is
+published alongside it at `/docs/`.
 
 One-time setup (not scriptable without an authenticated `gh`): in the repo's **Settings →
 Pages**, set **Build and deployment → Source** to **GitHub Actions**. After that, every push
 to `main` redeploys automatically — check the **Actions** tab for status and the deployed
 URL.
+
+## /docs — documentation site (Jekyll)
+
+A separate Jekyll site, independent of the app, for longer-form documentation. Currently
+just a placeholder (`docs/index.md`) — add Markdown pages with front matter as needed and
+the workflow builds and publishes them on the next push, at `<pages-url>/docs/`.
+
+- `docs/_config.yml` — Jekyll config (uses the `minima` theme).
+- `docs/Gemfile` — pins the Jekyll/theme gem versions the workflow installs.
+- `docs/index.md` — the docs site's home page.
+
+To preview locally, you need Ruby and Bundler installed:
+```
+cd docs
+bundle install
+bundle exec jekyll serve
+```
+Then open http://localhost:4000/.
