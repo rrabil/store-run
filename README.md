@@ -16,6 +16,13 @@ python -m http.server 8420
 
 Then open http://localhost:8420/.
 
+### Faster: the `weekly-list` skill
+
+In a Claude Code session with this repo open, invoke `/weekly-list` (or just ask to start
+this week's list). It checks whether the server's already up and starts it if not, asks
+what's being cooked, builds the week's JSON from `/private`, and hands back the exact
+`?list=` URL to open — see `.claude/skills/weekly-list/SKILL.md`.
+
 ## How it works
 
 - **The weekly list** is a JSON file you import with the "Import list" button (data model
