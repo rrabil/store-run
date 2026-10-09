@@ -42,10 +42,11 @@ jobs:
           working-directory: docs
 
       - name: Build docs site with Jekyll
+        working-directory: docs
         run: |
           bundle exec jekyll build \
-            --source docs \
-            --destination _site/docs \
+            --source . \
+            --destination ../_site/docs \
             --baseurl "/${{ github.event.repository.name }}/docs"
 
       - uses: actions/configure-pages@v5
