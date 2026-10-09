@@ -1,0 +1,29 @@
+{
+  "week": "Week of Jan 5, 2026",
+  "recipeNotes": [
+    { "title": "Example Sheet Pan Chicken", "text": "Doubled. Sauce only this week — garnish section dropped." },
+    { "title": "Example Weeknight Pasta", "text": "Buy as written, no scaling." },
+    { "title": "Sample bread", "text": "Skipped this week (off week)." }
+  ],
+  "items": [
+    { "id": "s01", "name": "Chicken breasts", "qty": "2 lbs", "note": "for sheet pan chicken", "store": "Lidl", "section": "MEAT & SEAFOOD", "flag": false, "include": true },
+    { "id": "s02", "name": "Pasta, penne", "qty": "1 box", "note": "", "store": "Lidl", "section": "PASTA & GRAINS", "flag": false, "include": true },
+    { "id": "s03", "name": "Kosher salt", "qty": "", "note": "", "store": "Lidl", "section": "SPICES & SEASONINGS", "flag": true, "include": true },
+
+    { "id": "s04", "name": "Bananas", "qty": "3-4", "note": "", "store": "Trader Joe's", "section": "PRODUCE", "flag": false, "include": true },
+    { "id": "s05", "name": "Avocados", "qty": "5 total", "note": "", "store": "Trader Joe's", "section": "PRODUCE", "flag": false, "include": true },
+    { "id": "s06", "name": "Carrots", "qty": "2 medium", "note": "for sheet pan chicken", "store": "Trader Joe's", "section": "PRODUCE", "flag": false, "include": true },
+    { "id": "s07", "name": "Cottage cheese, low fat", "qty": "2 containers", "note": "", "store": "Trader Joe's", "section": "DAIRY & EGGS", "flag": false, "include": true },
+    { "id": "s08", "name": "Cage-free organic eggs", "qty": "2 cartons", "note": "", "store": "Trader Joe's", "section": "DAIRY & EGGS", "flag": false, "include": true },
+    { "id": "s09", "name": "Sourdough bread", "qty": "1 loaf", "note": "", "store": "Trader Joe's", "section": "BAKERY & BREAD", "flag": false, "include": true },
+    { "id": "s10", "name": "Frozen waffles", "qty": "", "note": "", "store": "Trader Joe's", "section": "FROZEN", "flag": false, "include": true },
+    { "id": "s11", "name": "Olive oil cooking spray", "qty": "", "note": "", "store": "Trader Joe's", "section": "OILS, SAUCES & CONDIMENTS", "flag": false, "include": true },
+    { "id": "s12", "name": "Sparkling water", "qty": "", "note": "", "store": "Trader Joe's", "section": "BEVERAGES", "flag": false, "include": false },
+
+    { "id": "s13", "name": "Egg whites", "qty": "", "note": "example Aldi-only item", "store": "Aldi", "section": "OTHER", "flag": true, "include": true },
+
+    { "id": "s14", "name": "Sesame oil", "qty": "", "note": "example H Mart item", "store": "H Mart", "section": "ASIAN PANTRY", "flag": true, "include": true },
+
+    { "id": "s15", "name": "Paper towels", "qty": "", "note": "example Giant/Safeway fallback item", "store": "Giant / Safeway", "section": "HOUSEHOLD", "flag": false, "include": true }
+  ]
+}
