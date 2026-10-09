@@ -14,7 +14,10 @@ blocks `fetch()` on local files. Serve the folder instead:
 python -m http.server 8420
 ```
 
-Then open http://localhost:8420/.
+Then open http://localhost:8420/. Or just double-click `start-server.bat` — it starts the
+server in the background and opens your browser to it. No terminal or Claude Code needed,
+so this works from a plain claude.ai chat too: ask it for this week's list there, save what
+it gives you, double-click the launcher, and import.
 
 ### Faster: the `weekly-list` skill
 
