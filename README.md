@@ -70,5 +70,9 @@ week's JSON. If you're cloning this repo fresh, `/private` won't exist until you
 
 ## Deployment
 
-GitHub Pages works once this repo is public (Pages on a private repo needs a paid GitHub
-plan). Set up the Action when asked.
+Deploys to GitHub Pages via `.github/workflows/deploy-pages.yml` on every push to `main`.
+
+One-time setup (not scriptable without an authenticated `gh`): in the repo's **Settings →
+Pages**, set **Build and deployment → Source** to **GitHub Actions**. After that, every push
+to `main` redeploys automatically — check the **Actions** tab for status and the deployed
+URL.
