@@ -12,6 +12,14 @@ None of these are read by the app at runtime except `sample-week.json`. The `.md
 reference material for whoever (you, or Claude) is assembling a week's JSON — see the root
 [CLAUDE.md](../CLAUDE.md).
 
+## library/ — structured recipe, staples and routing data
+
+`library/` holds a **fictional starter library** (recipes, staples, store routing) as JSON,
+plus [library/README.md](library/README.md) explaining the format. A real household keeps
+the same three files in `private/data/`. Check either with `python scripts/check_data.py`.
+Nothing reads these files at runtime yet; the recipe picker and list generator (roadmap
+Phase 2) will.
+
 ## Your own recipes/staples/routing
 
 This repo's actual recipe library, staples list, and store routing live in `/private`,

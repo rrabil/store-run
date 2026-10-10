@@ -62,6 +62,12 @@ or the personal reference files under `/data`.
   reference only — `/private/recipes.md` etc. are already the merged, current source of
   truth, so you shouldn't need to re-read `seed/` for routine weeks).
 
+- `private/data/` — the same recipes, staples and routing as structured JSON
+  (`recipes.json`, `staples.json`, `routing.json`; format in `data/library/README.md`).
+  When you change `private/recipes.md`, `staples.md` or `store-routing.md`, keep the JSON
+  in step, then run `python scripts/check_data.py`. `data/library/` is the fictional public
+  starter set; never copy real data into it.
+
 If `/private` doesn't exist yet (e.g. a fresh clone), these files need to be created —
 ask Richard for his recipes/staples/routing rather than assuming defaults.
 

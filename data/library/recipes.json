@@ -1,0 +1,384 @@
+{
+  "version": 1,
+  "categories": [
+    "Chicken",
+    "Turkey",
+    "Beef & lamb",
+    "Pork",
+    "Fish & seafood",
+    "Vegetarian"
+  ],
+  "recipes": [
+    {
+      "id": "example-sheet-pan-chicken",
+      "name": "Example Sheet Pan Chicken",
+      "aliases": [],
+      "category": "Chicken",
+      "source": "",
+      "servings": 8,
+      "originalServings": 4,
+      "servingsText": "",
+      "exclusions": [
+        "garnish"
+      ],
+      "substitutions": [],
+      "notes": [
+        "Fictional sample recipe. Doubled; sauce only, garnish dropped."
+      ],
+      "ingredients": [
+        {
+          "name": "Chicken breasts",
+          "quantity": 4,
+          "unit": "lb",
+          "scales": true,
+          "store": "Lidl",
+          "section": "MEAT & SEAFOOD",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "for sheet pan chicken",
+          "group": ""
+        },
+        {
+          "name": "Carrots",
+          "quantity": 4,
+          "unit": null,
+          "scales": true,
+          "store": "Trader Joe's",
+          "section": "PRODUCE",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "medium",
+          "group": ""
+        },
+        {
+          "name": "Olive oil",
+          "quantity": 4,
+          "unit": "tbsp",
+          "scales": true,
+          "store": "Lidl",
+          "section": "OILS, SAUCES & CONDIMENTS",
+          "flag": true,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Garlic powder",
+          "quantity": 4,
+          "unit": "tsp",
+          "scales": true,
+          "store": "Lidl",
+          "section": "SPICES & SEASONINGS",
+          "flag": true,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Paprika",
+          "quantity": 4,
+          "unit": "tsp",
+          "scales": true,
+          "store": "Lidl",
+          "section": "SPICES & SEASONINGS",
+          "flag": true,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Kosher salt",
+          "quantity": null,
+          "unit": null,
+          "scales": false,
+          "store": "Lidl",
+          "section": "SPICES & SEASONINGS",
+          "flag": true,
+          "optional": false,
+          "onHand": false,
+          "note": "to taste",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "id": "example-weeknight-pasta",
+      "name": "Example Weeknight Pasta",
+      "aliases": [],
+      "category": "Vegetarian",
+      "source": "",
+      "servings": null,
+      "originalServings": null,
+      "servingsText": "no scaling",
+      "exclusions": [],
+      "substitutions": [],
+      "notes": [
+        "Fictional sample recipe. Buy as written, no scaling."
+      ],
+      "ingredients": [
+        {
+          "name": "Pasta, penne",
+          "quantity": 1,
+          "unit": "box",
+          "scales": true,
+          "store": "Lidl",
+          "section": "PASTA & GRAINS",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Marinara sauce",
+          "quantity": 1,
+          "unit": "jar",
+          "scales": true,
+          "store": "Lidl",
+          "section": "CANNED & JARRED",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Parmesan, grated",
+          "quantity": 0.5,
+          "unit": "cup",
+          "scales": true,
+          "store": "Trader Joe's",
+          "section": "DAIRY & EGGS",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Fresh basil",
+          "quantity": 1,
+          "unit": "bunch",
+          "scales": true,
+          "store": "Trader Joe's",
+          "section": "PRODUCE",
+          "flag": false,
+          "optional": true,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "id": "sample-salmon-bowls",
+      "name": "Sample Salmon Bowls",
+      "aliases": [],
+      "category": "Fish & seafood",
+      "source": "",
+      "servings": 4,
+      "originalServings": null,
+      "servingsText": "",
+      "exclusions": [
+        "avocado"
+      ],
+      "substitutions": [],
+      "notes": [
+        "Fictional sample recipe."
+      ],
+      "ingredients": [
+        {
+          "name": "Salmon",
+          "quantity": 1.5,
+          "unit": "lb",
+          "scales": false,
+          "store": "Lidl",
+          "section": "MEAT & SEAFOOD",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "amount doesn't need to scale precisely",
+          "group": ""
+        },
+        {
+          "name": "Soy sauce",
+          "quantity": 0.25,
+          "unit": "cup",
+          "scales": true,
+          "store": "Lidl",
+          "section": "OILS, SAUCES & CONDIMENTS",
+          "flag": true,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Honey",
+          "quantity": 2,
+          "unit": "tbsp",
+          "scales": true,
+          "store": "Lidl",
+          "section": "OILS, SAUCES & CONDIMENTS",
+          "flag": true,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Persian cucumbers",
+          "quantity": 2,
+          "unit": null,
+          "scales": true,
+          "store": "Trader Joe's",
+          "section": "PRODUCE",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Avocados",
+          "quantity": 2,
+          "unit": null,
+          "scales": true,
+          "store": "Trader Joe's",
+          "section": "PRODUCE",
+          "flag": false,
+          "optional": true,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Sesame seeds",
+          "quantity": 1,
+          "unit": "tbsp",
+          "scales": true,
+          "store": "H Mart",
+          "section": "ASIAN PANTRY",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "White rice",
+          "quantity": null,
+          "unit": null,
+          "scales": false,
+          "store": "Lidl",
+          "section": "PASTA & GRAINS",
+          "flag": true,
+          "optional": false,
+          "onHand": false,
+          "note": "for serving",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "id": "example-beef-chili",
+      "name": "Example Beef Chili",
+      "aliases": [],
+      "category": "Beef & lamb",
+      "source": "",
+      "servings": 6,
+      "originalServings": null,
+      "servingsText": "",
+      "exclusions": [],
+      "substitutions": [],
+      "notes": [
+        "Fictional sample recipe."
+      ],
+      "ingredients": [
+        {
+          "name": "Ground beef",
+          "quantity": 2,
+          "unit": "lb",
+          "scales": true,
+          "store": "Lidl",
+          "section": "MEAT & SEAFOOD",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Yellow onion",
+          "quantity": 1,
+          "unit": null,
+          "scales": true,
+          "store": "Trader Joe's",
+          "section": "PRODUCE",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "large",
+          "group": ""
+        },
+        {
+          "name": "Green bell pepper",
+          "quantity": 1,
+          "unit": null,
+          "scales": true,
+          "store": "Trader Joe's",
+          "section": "PRODUCE",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Chili powder",
+          "quantity": 3,
+          "unit": "tbsp",
+          "scales": true,
+          "store": "Lidl",
+          "section": "SPICES & SEASONINGS",
+          "flag": true,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        },
+        {
+          "name": "Diced tomatoes",
+          "quantity": 2,
+          "unit": "can",
+          "scales": true,
+          "store": "Trader Joe's",
+          "section": "CANNED & JARRED",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "14 oz each",
+          "group": ""
+        },
+        {
+          "name": "Kidney beans",
+          "quantity": 2,
+          "unit": "can",
+          "scales": true,
+          "store": "Trader Joe's",
+          "section": "CANNED & JARRED",
+          "flag": false,
+          "optional": false,
+          "onHand": false,
+          "note": "",
+          "group": ""
+        }
+      ]
+    }
+  ]
+}

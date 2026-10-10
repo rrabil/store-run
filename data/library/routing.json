@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "storeOrder": ["Lidl", "Trader Joe's", "Aldi", "H Mart", "Giant / Safeway"],
+  "fallbackStores": ["Giant / Safeway"],
+  "sections": [
+    "PRODUCE", "BAKERY & BREAD", "DELI & SPECIALTY", "MEAT & SEAFOOD", "DAIRY & EGGS", "FROZEN",
+    "BREAKFAST", "BAKING", "PASTA & GRAINS", "CANNED & JARRED", "OILS, SAUCES & CONDIMENTS",
+    "SPICES & SEASONINGS", "SNACKS & NUTS", "BEVERAGES", "BREAD & PACKAGED BAKERY",
+    "ASIAN PANTRY", "HOUSEHOLD", "OTHER"
+  ],
+  "defaultSectionByStore": {
+    "Aldi": "OTHER",
+    "H Mart": "ASIAN PANTRY"
+  },
+  "stores": [
+    { "name": "Lidl", "role": "primary", "routeHere": ["Example: meat and seafood, pasta, bulk pantry items"] },
+    { "name": "Trader Joe's", "role": "primary", "routeHere": ["Example: produce, dairy and eggs, frozen, canned goods, beverages"] },
+    { "name": "Aldi", "role": "primary", "routeHere": ["Example: last resort for anything not found elsewhere"] },
+    { "name": "H Mart", "role": "primary", "routeHere": ["Example: Asian pantry items hard to find elsewhere"] },
+    { "name": "Giant / Safeway", "role": "fallback", "routeHere": ["Example: only when nothing else carries the item"] }
+  ],
+  "exceptions": [
+    { "item": "Example special item", "store": "Aldi", "reason": "Example of an item that always goes to one store, overriding the general rules" }
+  ],
+  "principle": "Quality-first, minimize backtracking, never split the same item across stores unless asked."
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "staples": [
+    { "name": "Bananas", "quantity": 3, "quantityMax": 4, "unit": null, "store": "Trader Joe's", "section": "PRODUCE" },
+    { "name": "Avocados", "quantity": 5, "unit": null, "note": "example: 3 unripe, 2 ripe", "store": "Trader Joe's", "section": "PRODUCE" },
+    { "name": "Cottage cheese, low fat", "quantity": 2, "unit": "container", "mustAlwaysAppear": true, "store": "Trader Joe's", "section": "DAIRY & EGGS" },
+    { "name": "Cage-free organic eggs", "quantity": 2, "unit": "carton", "store": "Trader Joe's", "section": "DAIRY & EGGS" },
+    { "name": "Sourdough bread", "quantity": 1, "unit": "loaf", "store": "Trader Joe's", "section": "BAKERY & BREAD" },
+    { "name": "Sample multi-grain bread", "quantity": 1, "unit": "loaf", "frequency": "biweekly", "askIfOnWeek": true, "note": "example of an every-other-week item", "store": "Lidl", "section": "BAKERY & BREAD" },
+    { "name": "Frozen fruit medley", "checkPantry": true, "note": "example of a check-pantry item", "store": "Trader Joe's", "section": "FROZEN" },
+    { "name": "Sparkling water", "store": "Trader Joe's", "section": "BEVERAGES" },
+    {
+      "name": "Sample holiday cookies",
+      "season": { "from": { "month": 11, "day": 15 }, "until": { "month": 12, "day": 31 } },
+      "note": "example of a seasonal item with a date window",
+      "store": "Trader Joe's", "section": "SNACKS & NUTS"
+    }
+  ],
+  "keptOnHand": [
+    { "name": "Apples", "note": "example of something kept on hand and never proposed" }
+  ],
+  "presentation": [
+    "List pantry items individually, never grouped on one line.",
+    "Prefer package units over counts: 1 pack, 1 box, 1 family pack, 2 loaves."
+  ]
+}
