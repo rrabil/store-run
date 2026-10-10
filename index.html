@@ -499,9 +499,172 @@ input[type="text"]:focus,select:focus{outline:2px solid var(--accent);outline-of
 .keep-panel p{font-size:13.5px;color:var(--muted);margin:0 0 12px;max-width:62ch}
 .keep-grid{display:flex;flex-wrap:wrap;gap:8px}
 
+/* ---------- top bar, sample badge, step header ---------- */
+.topbar{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:8px 12px;margin-bottom:12px;
+}
+.sample-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--flag-soft);color:var(--flag);
+  border-radius:999px;padding:3px 4px 3px 12px;
+  font-size:13px;font-weight:600;
+}
+.sample-badge .btn{min-height:36px;padding:4px 12px;border-radius:999px;border-color:var(--flag);color:var(--flag);background:transparent}
+.steps ol{list-style:none;display:flex;gap:8px;margin:0;padding:0}
+.steps li{flex:1 1 0;min-width:0}
+.steps button{
+  width:100%;min-height:52px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid var(--line);border-radius:10px;background:var(--surface);
+  color:var(--muted);font-size:14.5px;font-weight:600;padding:6px 8px;
+}
+.steps button[aria-current="step"]{background:var(--accent);border-color:var(--accent);color:var(--ground)}
+.steps button:disabled{opacity:.45;cursor:default}
+.step-n{
+  display:grid;place-items:center;flex:0 0 auto;
+  width:24px;height:24px;border-radius:50%;
+  border:1.5px solid currentColor;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
+}
+#viewReview{margin-top:22px}
+.view-head{margin:22px 0 0}
+.view-head h1,.view-head h2{
+  font-family:"Fraunces",Georgia,serif;font-weight:600;
+  font-size:clamp(24px,5vw,32px);line-height:1.15;letter-spacing:-.01em;margin:0 0 6px;
+}
+.view-head p{margin:0;color:var(--ink-2);max-width:60ch}
+.muted-text{color:var(--muted);font-size:14px}
+
+/* ---------- home ---------- */
+.hero{padding:34px 0 8px}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 10px;
+}
+.hero h1{
+  font-family:"Fraunces",Georgia,serif;font-weight:600;
+  font-size:clamp(32px,7.4vw,54px);line-height:1.05;letter-spacing:-.02em;
+  margin:0 0 14px;text-wrap:balance;max-width:16em;
+}
+.hero-sub{font-size:17px;color:var(--ink-2);max-width:56ch;margin:0 0 22px}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.btn-lg{min-height:54px;padding:12px 22px;font-size:16.5px;border-radius:10px}
+.hero-note{margin:14px 0 0;font-size:13.5px;color:var(--muted);max-width:56ch}
+.how{margin-top:40px;border-top:2px solid var(--ink);padding-top:20px}
+.how h2{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600;margin:0 0 14px}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.how-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.how-list li{display:flex;gap:12px;align-items:flex-start}
+.how-n{
+  flex:0 0 auto;width:30px;height:30px;border-radius:50%;
+  display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:500;
+}
+.how-list b{display:block;font-size:16px}
+.how-list span.t{color:var(--ink-2);font-size:14.5px}
+.preview{
+  background:var(--surface);border:1px solid var(--line-soft);border-radius:12px;
+  box-shadow:var(--shadow);padding:14px 16px;
+}
+.preview .pv-label{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;
+}
+.pv-store{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:16px;margin:10px 0 4px;display:flex;align-items:center;gap:8px}
+.pv-store i{width:9px;height:9px;border-radius:2px;background:var(--s1);display:inline-block}
+.pv-store.s2 i{background:var(--s2)}
+.pv-row{display:flex;justify-content:space-between;gap:10px;font-size:14.5px;padding:4px 0;border-top:1px solid var(--line-soft)}
+.pv-row span:last-child{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;color:var(--ink-2)}
+.home-foot{margin-top:40px;font-size:13.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 16px}
+.home-foot a{color:var(--accent);text-underline-offset:3px}
+
+/* ---------- recipe picker ---------- */
+.search{margin-top:16px}
+.search input[type="text"]{min-height:50px;font-size:16px;padding:10px 14px;border-radius:10px}
+.cat{margin-top:24px}
+.cat h3{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;
+}
+.cat-list{display:grid;gap:10px}
+.recipe-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;
+}
+.recipe-card.picked{border-color:var(--accent);background:var(--accent-soft)}
+.recipe-main{
+  display:flex;align-items:center;gap:14px;width:100%;text-align:left;
+  min-height:64px;padding:12px 14px;
+}
+.recipe-check{
+  flex:0 0 auto;width:28px;height:28px;border-radius:7px;
+  border:1.5px solid var(--muted);display:grid;place-items:center;
+}
+.recipe-check svg{width:14px;height:14px;opacity:0;stroke:var(--ground);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.recipe-card.picked .recipe-check{background:var(--accent);border-color:var(--accent)}
+.recipe-card.picked .recipe-check svg{opacity:1}
+.recipe-text{display:grid;gap:2px;min-width:0}
+.recipe-name{font-size:16.5px;font-weight:600;line-height:1.25}
+.recipe-meta{font-size:13px;color:var(--muted)}
+.batch{display:flex;align-items:center;gap:8px;padding:0 14px 12px 56px;flex-wrap:wrap}
+.batch-label{font-size:13px;color:var(--ink-2);margin-right:2px}
+.seg{display:inline-flex;gap:6px}
+.seg button{
+  min-height:44px;min-width:56px;padding:6px 14px;
+  border:1px solid var(--line);border-radius:9px;background:var(--surface);
+  color:var(--ink-2);font-weight:600;font-size:15px;
+}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--ground)}
+.actionbar{
+  position:sticky;bottom:0;z-index:20;
+  margin-top:22px;padding:14px 0 calc(14px + env(safe-area-inset-bottom));
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  background:linear-gradient(to bottom,transparent,var(--ground) 28%);
+}
+.actionbar{flex-wrap:nowrap;margin-top:16px;padding-top:10px}
+.actionbar .count{font-weight:600;font-size:14.5px}
+.actionbar .grow{flex:1 1 auto}
+.actionbar .btn-lg{width:auto;min-height:48px;padding:10px 16px;font-size:15.5px;white-space:nowrap}
+
+/* ---------- staples questions ---------- */
+.q-list{display:grid;gap:12px;margin-top:20px}
+.q-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px}
+.q-card h3{margin:0 0 2px;font-size:16.5px}
+.q-card p{margin:0 0 10px;font-size:13.5px;color:var(--muted)}
+.q-none{padding:18px;background:var(--surface);border:1px dashed var(--line);border-radius:12px;color:var(--ink-2)}
+
+/* ---------- bigger tap targets ---------- */
+.btn{min-height:44px;padding:8px 14px}
+.btn-small{min-height:40px}
+.store-copy{min-height:40px;padding:6px 12px;font-size:12.5px}
+input[type="text"],select{min-height:46px;font-size:16px;padding:9px 11px}
+.check-line{min-height:44px}
+.check-line input{width:22px;height:22px}
+.row{padding:14px 14px;gap:13px}
+.tick{width:26px;height:26px;margin-top:0;position:relative;border-radius:7px}
+.tick::after{content:"";position:absolute;inset:-12px}
+.tick svg{width:14px;height:14px}
+.name{font-size:16.5px}
+.qty{font-size:13.5px;padding-top:3px}
+.edit-btn{width:44px;height:44px;margin:-9px -8px -9px 0;opacity:.7}
+.edit-btn svg{width:18px;height:18px}
+.add-row{min-height:52px;font-size:15px}
+.week{min-height:36px;font-size:13px}
+@media (hover:none){
+  .edit-btn{opacity:1}
+}
+
+@media (max-width:640px){
+  .how-grid{grid-template-columns:1fr}
+}
 @media (max-width:480px){
   .row{flex-wrap:wrap}
-  .qty{max-width:100%;width:100%;text-align:left;padding-left:30px;padding-top:2px}
+  .qty{max-width:100%;width:100%;text-align:left;padding-left:39px;padding-top:2px}
+  .batch{padding-left:14px}
+  .btn-lg{width:100%}
+  .cta-row .btn{width:100%}
   .edit-btn{opacity:1}
   .grid2{grid-template-columns:1fr}
   .tally{text-align:left}
@@ -513,6 +676,99 @@ input[type="text"]:focus,select:focus{outline:2px solid var(--accent);outline-of
 </style>
 
 <div class="wrap">
+
+  <div class="topbar" id="topbar" hidden>
+    <button type="button" class="btn btn-quiet" id="homeBtn">&lsaquo; Home</button>
+    <div class="sample-badge" id="sampleBadge" hidden>
+      <span id="sampleBadgeText">Sample data</span>
+      <button type="button" class="btn" id="startFresh" hidden>Start fresh</button>
+    </div>
+  </div>
+
+  <nav class="steps" id="steps" aria-label="Progress" hidden>
+    <ol>
+      <li><button type="button" data-step="pick"><span class="step-n">1</span><span>Meals</span></button></li>
+      <li><button type="button" data-step="staples"><span class="step-n">2</span><span>Staples</span></button></li>
+      <li><button type="button" data-step="review"><span class="step-n">3</span><span>Review</span></button></li>
+    </ol>
+  </nav>
+
+  <!-- ===== Home ===== -->
+  <div id="viewHome" hidden>
+    <section class="hero">
+      <p class="eyebrow">Weekly grocery list</p>
+      <h1>Pick this week&rsquo;s meals. Get one list, sorted by store.</h1>
+      <p class="hero-sub">Store Run turns your saved recipes and weekly staples into a shopping list ordered by store and aisle, so you walk each store once. It all runs in your browser and nothing is uploaded.</p>
+      <div class="cta-row">
+        <button type="button" class="btn btn-primary btn-lg" id="createBtn">Create this week&rsquo;s list</button>
+        <button type="button" class="btn btn-lg" id="continueBtn" hidden></button>
+      </div>
+      <p class="hero-note" id="homeSampleNote" hidden>You&rsquo;re looking at a fictional sample recipe set, so feel free to try everything. Nothing here is real data.</p>
+    </section>
+
+    <section class="how" aria-labelledby="howTitle">
+      <h2 id="howTitle">How it works</h2>
+      <div class="how-grid">
+        <ol class="how-list">
+          <li><span class="how-n">1</span><div><b>Pick your meals</b><span class="t">Tap the recipes you&rsquo;re cooking. Halve or double a batch if you need to.</span></div></li>
+          <li><span class="how-n">2</span><div><b>Answer a few quick questions</b><span class="t">Is it an &ldquo;on&rdquo; week for the bread? Is that seasonal treat in season?</span></div></li>
+          <li><span class="how-n">3</span><div><b>Review, then copy</b><span class="t">Drop what you already have, fix quantities, then copy the list to paste into Google Keep.</span></div></li>
+        </ol>
+        <div class="preview" aria-hidden="true">
+          <div class="pv-label">What you get</div>
+          <div class="pv-store"><i></i>Lidl</div>
+          <div class="pv-row"><span>Chicken breasts</span><span>2 lbs</span></div>
+          <div class="pv-row"><span>Pasta, penne</span><span>1 box</span></div>
+          <div class="pv-store s2"><i></i>Trader Joe&rsquo;s</div>
+          <div class="pv-row"><span>Carrots</span><span>2</span></div>
+          <div class="pv-row"><span>Cottage cheese</span><span>2 containers</span></div>
+          <div class="pv-row"><span>Sourdough bread</span><span>1 loaf</span></div>
+        </div>
+      </div>
+    </section>
+
+    <p class="home-foot">
+      <span>Built with Claude Code.</span>
+      <a href="https://github.com/rrabil/store-run">Source on GitHub</a>
+      <a href="docs/">Documentation</a>
+    </p>
+  </div>
+
+  <!-- ===== Pick meals ===== -->
+  <div id="viewPick" hidden>
+    <div class="view-head">
+      <h2>What&rsquo;s cooking this week?</h2>
+      <p>Tap a recipe to add it. Use the batch buttons to halve or double what you buy.</p>
+    </div>
+    <div class="search field">
+      <label for="recipeSearch" class="muted-text">Search recipes</label>
+      <input type="text" id="recipeSearch" placeholder="Name, protein&hellip;" autocomplete="off">
+    </div>
+    <div id="pickBody"></div>
+    <div class="actionbar">
+      <span class="count" id="pickCount">0 recipes picked</span>
+      <span class="grow"></span>
+      <button type="button" class="btn btn-quiet" id="clearPicks">Clear</button>
+      <button type="button" class="btn btn-primary btn-lg" id="toStaples">Next: staples &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ===== Staples ===== -->
+  <div id="viewStaples" hidden>
+    <div class="view-head">
+      <h2>A few quick questions</h2>
+      <p>Your usual staples are added automatically. You can drop anything you don&rsquo;t need in the next step.</p>
+    </div>
+    <div id="stapleBody" class="q-list"></div>
+    <div class="actionbar">
+      <button type="button" class="btn btn-quiet" id="backToPick">&lsaquo; Meals</button>
+      <span class="grow"></span>
+      <button type="button" class="btn btn-primary btn-lg" id="buildList">Build my list</button>
+    </div>
+  </div>
+
+  <!-- ===== Review (the original app screen) ===== -->
+  <div id="viewReview" hidden>
   <header class="masthead">
     <div>
       <h1>Store Run</h1>
@@ -528,6 +784,7 @@ input[type="text"]:focus,select:focus{outline:2px solid var(--accent);outline-of
   <p class="lede">This is the <b>draft</b> for review, not your shopping list. Everything starts on the list — switch off what you don't need, fix any names or quantities, add what's missing. When it looks right, use the Copy for Keep panel at the bottom to paste into the Keep note you share with your wife.</p>
 
   <div class="toolbar">
+    <button class="btn" id="changeMeals">&lsaquo; Change meals</button>
     <button class="btn" id="hideDone" aria-pressed="false">Hide dropped</button>
     <button class="btn btn-quiet" id="resetAll">Restore all</button>
     <span class="spacer"></span>
@@ -553,10 +810,12 @@ input[type="text"]:focus,select:focus{outline:2px solid var(--accent);outline-of
   </section>
 
   <p class="foot">Edits save to this browser automatically, so a refresh won't lose your work. Use Export to save a JSON copy of this week's list, or Import to load a new one.</p>
+  </div><!-- /viewReview -->
 </div>
 
 <div class="toast" id="toast"></div>
 
+<script src="js/list-engine.js"></script>
 <script>
 (function(){
   "use strict";
@@ -1068,6 +1327,7 @@ input[type="text"]:focus,select:focus{outline:2px solid var(--accent);outline-of
 
   function normalize(data){
     return {
+      sample: !!data.sample,
       week: typeof data.week === "string" ? data.week : "Untitled week",
       recipeNotes: Array.isArray(data.recipeNotes) ? data.recipeNotes.map(function(n){
         if(typeof n === "string") return { title:"", text:n };
@@ -1172,6 +1432,355 @@ input[type="text"]:focus,select:focus{outline:2px solid var(--accent);outline-of
     copyText(keepTextFor(STORES), "Full list");
   });
 
+  /* ---------- screens: home -> pick -> staples -> review ---------- */
+
+  var VIEWS = ["home","pick","staples","review"];
+  var VIEW_IDS = { home:"viewHome", pick:"viewPick", staples:"viewStaples", review:"viewReview" };
+  var view = "home";
+  var library = null;
+  var libraryPromise = null;
+  var PLAN_KEY = "storerun_plan";
+  var SAMPLE_WEEK_TITLE = "Week of Jan 5, 2026";
+  var BATCHES = [ { v:0.5, label:"½×" }, { v:1, label:"1×" }, { v:2, label:"2×" } ];
+
+  /* plan = what's been picked and answered so far (survives a refresh) */
+  var plan = { picks:[], onWeek:{}, season:{} };
+  try {
+    var rawPlan = JSON.parse(localStorage.getItem(PLAN_KEY) || "null");
+    if(rawPlan && Array.isArray(rawPlan.picks)){
+      plan.picks = rawPlan.picks.filter(function(p){ return p && typeof p.id === "string"; });
+      plan.onWeek = rawPlan.onWeek || {};
+      plan.season = rawPlan.season || {};
+    }
+  } catch(e){}
+
+  function savePlan(){
+    try { localStorage.setItem(PLAN_KEY, JSON.stringify(plan)); } catch(e){}
+  }
+
+  function pickOf(id){
+    return plan.picks.filter(function(p){ return p.id === id; })[0] || null;
+  }
+
+  function hashView(){
+    var h = (location.hash || "").replace("#","");
+    return VIEWS.indexOf(h) > 0 ? h : null;
+  }
+
+  function libraryBase(){
+    var p = null;
+    try { p = new URLSearchParams(location.search).get("library"); } catch(e){}
+    return (p || "data/library").replace(/\/+$/, "");
+  }
+
+  function loadLibrary(){
+    if(libraryPromise) return libraryPromise;
+    var base = libraryBase();
+    function get(name){
+      return fetch(base + "/" + name).then(function(r){
+        if(!r.ok) throw new Error(name);
+        return r.json();
+      });
+    }
+    libraryPromise = Promise.all([get("recipes.json"), get("staples.json"), get("routing.json")])
+      .then(function(a){
+        library = { recipes:a[0], staples:a[1], routing:a[2], base:base, isSample: base === "data/library" };
+        var ids = {};
+        library.recipes.recipes.forEach(function(r){ ids[r.id] = true; });
+        plan.picks = plan.picks.filter(function(p){ return ids[p.id]; });
+        return library;
+      });
+    libraryPromise.catch(function(){ libraryPromise = null; });
+    return libraryPromise;
+  }
+
+  function go(name){
+    try {
+      history.pushState({ v:name }, "", name === "home" ? location.pathname + location.search : "#" + name);
+    } catch(e){}
+    showView(name);
+  }
+
+  function showView(name){
+    if(VIEWS.indexOf(name) === -1) name = "home";
+    view = name;
+    VIEWS.forEach(function(v){ document.getElementById(VIEW_IDS[v]).hidden = (v !== name); });
+    document.getElementById("topbar").hidden = (name === "home");
+    document.getElementById("steps").hidden = (name === "home");
+    updateSteps();
+    updateBadge();
+    if(name === "home") renderHome();
+    if(name === "pick") enterPick();
+    if(name === "staples") enterStaples();
+    window.scrollTo(0, 0);
+  }
+
+  function updateSteps(){
+    document.querySelectorAll("#steps button").forEach(function(b){
+      var s = b.getAttribute("data-step");
+      if(s === view) b.setAttribute("aria-current","step"); else b.removeAttribute("aria-current");
+      b.disabled = (s === "review" && !(state && state.items.length));
+    });
+  }
+
+  function updateBadge(){
+    var badge = document.getElementById("sampleBadge");
+    var txt = "", fresh = false;
+    if(view === "review" && state && state.sample){ txt = "Sample data"; fresh = true; }
+    else if((view === "pick" || view === "staples") && library && library.isSample){ txt = "Sample recipes"; }
+    badge.hidden = !txt;
+    document.getElementById("sampleBadgeText").textContent = txt;
+    document.getElementById("startFresh").hidden = !fresh;
+  }
+
+  function renderHome(){
+    var cont = document.getElementById("continueBtn");
+    var has = !!(state && state.items && state.items.length);
+    cont.hidden = !has;
+    if(has) cont.textContent = state.sample ? "See the sample list" : "Continue: " + (state.week || "this week’s list");
+    document.getElementById("homeSampleNote").hidden = !(library && library.isSample);
+  }
+
+  function libraryError(host){
+    host.innerHTML = "";
+    var msg = typeof StoreRunEngine === "undefined"
+      ? "The list engine didn't load. Reload the page, or run the app from a local server (see the README)."
+      : "Couldn't load the recipe library from “" + libraryBase() + "”. Run the app from a local server (see the README).";
+    host.appendChild(el("div","q-none", msg));
+  }
+
+  /* ----- pick meals ----- */
+
+  function enterPick(){
+    var host = document.getElementById("pickBody");
+    if(!library){
+      host.innerHTML = "";
+      host.appendChild(el("p","muted-text","Loading recipes…"));
+    }
+    loadLibrary().then(function(){ renderPick(); updateBadge(); }).catch(function(){ libraryError(host); });
+  }
+
+  function metaFor(r){
+    var bits = [r.category];
+    var s = r.servingsText || (r.servings ? String(r.servings) : "");
+    if(s) bits.push(/[a-z]/i.test(s) ? s : s + " servings");
+    if(r.aliases && r.aliases.length) bits.push("also: " + r.aliases.join(", "));
+    return bits.join(" · ");
+  }
+
+  function recipeCard(r){
+    var pick = pickOf(r.id);
+    var card = el("div","recipe-card" + (pick ? " picked" : ""));
+
+    var main = el("button","recipe-main");
+    main.type = "button";
+    main.setAttribute("aria-pressed", pick ? "true" : "false");
+    var box = el("span","recipe-check");
+    box.appendChild(tickSvg());
+    main.appendChild(box);
+    var txt = el("span","recipe-text");
+    txt.appendChild(el("span","recipe-name", r.name));
+    txt.appendChild(el("span","recipe-meta", metaFor(r)));
+    main.appendChild(txt);
+    main.addEventListener("click", function(){
+      if(pick) plan.picks = plan.picks.filter(function(p){ return p.id !== r.id; });
+      else plan.picks.push({ id:r.id, batch:1 });
+      savePlan();
+      card.replaceWith(recipeCard(r));
+      updatePickBar();
+    });
+    card.appendChild(main);
+
+    if(pick){
+      var row = el("div","batch");
+      row.appendChild(el("span","batch-label","Batch"));
+      var seg = el("div","seg");
+      seg.setAttribute("role","group");
+      seg.setAttribute("aria-label","Batch size for " + r.name);
+      BATCHES.forEach(function(b){
+        var btn = el("button",null,b.label);
+        btn.type = "button";
+        btn.setAttribute("aria-pressed", pick.batch === b.v ? "true" : "false");
+        btn.addEventListener("click", function(){
+          pick.batch = b.v;
+          savePlan();
+          card.replaceWith(recipeCard(r));
+        });
+        seg.appendChild(btn);
+      });
+      row.appendChild(seg);
+      card.appendChild(row);
+    }
+    return card;
+  }
+
+  function renderPick(){
+    var host = document.getElementById("pickBody");
+    var q = document.getElementById("recipeSearch").value.trim().toLowerCase();
+    var all = library.recipes.recipes.filter(function(r){
+      if(!q) return true;
+      var hay = (r.name + " " + r.category + " " + (r.aliases || []).join(" ")).toLowerCase();
+      return hay.indexOf(q) !== -1;
+    });
+    host.innerHTML = "";
+    if(!all.length){
+      host.appendChild(el("div","q-none", q ? "No recipes match “" + q + "”." : "No recipes in this library yet."));
+    }
+    var cats = (library.recipes.categories || []).slice();
+    all.forEach(function(r){ if(cats.indexOf(r.category) === -1) cats.push(r.category); });
+    cats.forEach(function(c){
+      var inCat = all.filter(function(r){ return r.category === c; });
+      if(!inCat.length) return;
+      var sec = el("section","cat");
+      sec.appendChild(el("h3",null,c));
+      var list = el("div","cat-list");
+      inCat.forEach(function(r){ list.appendChild(recipeCard(r)); });
+      sec.appendChild(list);
+      host.appendChild(sec);
+    });
+    updatePickBar();
+  }
+
+  function updatePickBar(){
+    var n = plan.picks.length;
+    document.getElementById("pickCount").textContent = n === 0 ? "No recipes picked" : n + (n === 1 ? " recipe picked" : " recipes picked");
+    document.getElementById("clearPicks").hidden = n === 0;
+  }
+
+  /* ----- staples questions ----- */
+
+  function seasonText(s){
+    if(!s) return "";
+    var from = MONTH_NAMES[s.from.month - 1] + " " + s.from.day;
+    var until = s.until === "us-thanksgiving" ? "Thanksgiving" : MONTH_NAMES[s.until.month - 1] + " " + s.until.day;
+    return from + " – " + until;
+  }
+  var MONTH_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function segRow(options, current, onPick, label){
+    var seg = el("div","seg");
+    seg.setAttribute("role","group");
+    seg.setAttribute("aria-label", label);
+    options.forEach(function(o){
+      var b = el("button",null,o.label);
+      b.type = "button";
+      b.setAttribute("aria-pressed", o.value === current ? "true" : "false");
+      b.addEventListener("click", function(){
+        onPick(o.value);
+        seg.querySelectorAll("button").forEach(function(x, i){
+          x.setAttribute("aria-pressed", options[i].value === o.value ? "true" : "false");
+        });
+      });
+      seg.appendChild(b);
+    });
+    return seg;
+  }
+
+  function enterStaples(){
+    var host = document.getElementById("stapleBody");
+    host.innerHTML = "";
+    loadLibrary().then(function(){ renderStaples(); updateBadge(); }).catch(function(){ libraryError(host); });
+  }
+
+  function renderStaples(){
+    var host = document.getElementById("stapleBody");
+    host.innerHTML = "";
+    var qs = StoreRunEngine.stapleQuestions(library, new Date());
+    var staples = {};
+    library.staples.staples.forEach(function(s){ staples[s.name] = s; });
+    if(!qs.length){
+      host.appendChild(el("div","q-none","No questions this week. Your usual staples will be added automatically."));
+      return;
+    }
+    qs.forEach(function(q){
+      var card = el("div","q-card");
+      if(q.type === "biweekly"){
+        card.appendChild(el("h3",null,q.name));
+        card.appendChild(el("p",null,"This one comes every other week. Is it an “on” week?"));
+        card.appendChild(segRow(
+          [ { label:"On week", value:true }, { label:"Off week", value:false } ],
+          !!plan.onWeek[q.name],
+          function(v){ plan.onWeek[q.name] = v; savePlan(); },
+          q.name + ": on week or off week"));
+      } else {
+        var s = staples[q.name];
+        var win = seasonText(s && s.season);
+        card.appendChild(el("h3",null,q.name));
+        card.appendChild(el("p",null,"Seasonal (" + win + "). " + (q.inSeason ? "It's in season right now." : "It's out of season right now.")));
+        var cur = plan.season.hasOwnProperty(q.name) ? plan.season[q.name] : q.inSeason;
+        card.appendChild(segRow(
+          [ { label:"Include", value:true }, { label:"Skip", value:false } ],
+          cur,
+          function(v){ plan.season[q.name] = v; savePlan(); },
+          q.name + ": include or skip"));
+      }
+      host.appendChild(card);
+    });
+  }
+
+  /* ----- build the list ----- */
+
+  function buildList(){
+    if(state && state.items.length && !state.sample){
+      if(!window.confirm("Building a new list replaces the list you’re reviewing now, including any edits you made. Continue?")) return;
+    }
+    var picks = plan.picks.map(function(p){ return { id:p.id, batch:p.batch || 1 }; });
+    var out;
+    try {
+      out = StoreRunEngine.generate(library, picks, {
+        date: new Date(), onWeek: plan.onWeek, seasonOverride: plan.season
+      });
+    } catch(e){
+      showToast("Couldn’t build the list: " + e.message);
+      return;
+    }
+    out.sample = !!library.isSample;
+    state = normalize(out);
+    editingId = null;
+    render();
+    renderWeek();
+    saveNow();
+    go("review");
+    showToast("Built a list with " + state.items.length + " items");
+  }
+
+  function startFresh(){
+    if(!window.confirm("Clear the sample list and start with an empty one?")) return;
+    state = normalize({ week:"Untitled week", items:[], recipeNotes:[] });
+    plan = { picks:[], onWeek:{}, season:{} };
+    savePlan();
+    editingId = null;
+    render();
+    renderWeek();
+    saveNow();
+    go("pick");
+  }
+
+  document.getElementById("createBtn").addEventListener("click", function(){
+    plan = { picks:[], onWeek:{}, season:{} };
+    savePlan();
+    document.getElementById("recipeSearch").value = "";
+    go("pick");
+  });
+  document.getElementById("continueBtn").addEventListener("click", function(){ go("review"); });
+  document.getElementById("homeBtn").addEventListener("click", function(){ go("home"); });
+  document.getElementById("changeMeals").addEventListener("click", function(){ go("pick"); });
+  document.getElementById("toStaples").addEventListener("click", function(){ go("staples"); });
+  document.getElementById("backToPick").addEventListener("click", function(){ go("pick"); });
+  document.getElementById("buildList").addEventListener("click", buildList);
+  document.getElementById("startFresh").addEventListener("click", startFresh);
+  document.getElementById("clearPicks").addEventListener("click", function(){
+    plan.picks = [];
+    savePlan();
+    renderPick();
+  });
+  document.getElementById("recipeSearch").addEventListener("input", function(){
+    if(library) renderPick();
+  });
+  document.querySelectorAll("#steps button").forEach(function(b){
+    b.addEventListener("click", function(){ go(b.getAttribute("data-step")); });
+  });
+
   /* ---------- load ---------- */
 
   function boot(data){
@@ -1185,24 +1794,47 @@ input[type="text"]:focus,select:focus{outline:2px solid var(--accent);outline-of
     try { return new URLSearchParams(location.search).get("list"); } catch(e){ return null; }
   }
 
-  function loadFallback(){
+  function loadFallback(done){
+    done = done || function(){};
     var saved = null;
     try { saved = localStorage.getItem(STATE_KEY); } catch(e){}
     if(saved){
-      try { boot(JSON.parse(saved)); return; } catch(e){}
+      try {
+        var data = JSON.parse(saved);
+        /* A sample week saved by an older version has no sample flag; label it. */
+        if(data.sample === undefined && data.week === SAMPLE_WEEK_TITLE) data.sample = true;
+        boot(data);
+        done();
+        return;
+      } catch(e){}
     }
     fetch("data/sample-week.json").then(function(r){
       if(!r.ok) throw new Error("no sample");
       return r.json();
     }).then(function(data){
+      data.sample = true;
       boot(data);
+      done();
     }).catch(function(){
       boot({ week:"Untitled week", items:[], recipeNotes:[] });
+      done();
     });
   }
 
   (function load(){
     var path = listParam();
+
+    /* Back/forward buttons move between screens. */
+    window.addEventListener("popstate", function(ev){
+      showView((ev.state && ev.state.v) || hashView() || "home");
+    });
+
+    /* Find out which recipe library we're using (fictional sample vs. your own). */
+    loadLibrary().then(function(){
+      if(view === "home") renderHome();
+      updateBadge();
+    }).catch(function(){});
+
     if(path){
       fetch(path).then(function(r){
         if(!r.ok) throw new Error("not found");
@@ -1210,14 +1842,15 @@ input[type="text"]:focus,select:focus{outline:2px solid var(--accent);outline-of
       }).then(function(data){
         boot(data);
         saveNow();
+        showView("review");
         showToast("Loaded " + (state.week || "list") + " from " + path);
       }).catch(function(){
         showToast("Couldn't load " + path + " — showing your last saved list instead");
-        loadFallback();
+        loadFallback(function(){ showView("review"); });
       });
       return;
     }
-    loadFallback();
+    loadFallback(function(){ showView(hashView() || "home"); });
   })();
 
 })();

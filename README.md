@@ -36,6 +36,23 @@ what's being cooked, builds the week's JSON from `/private`, and hands back the 
   Google Keep expects, store by store. There's a whole-list copy button and a per-store copy
   button next to each store heading (Keep has choked on very long single pastes before).
 
+## The flow
+
+1. **Home** describes the app and starts a new week (or continues the saved one).
+2. **Meals** is the recipe picker: tap recipes, and halve or double a batch.
+3. **Staples** asks the few questions that change week to week (is it an "on" week for the
+   every-other-week bread, is the seasonal item in season).
+4. **Review** is the editable list, with Copy for Keep.
+
+The list is built by `js/list-engine.js` from the recipe library. By default the app loads
+the fictional starter library in `data/library/`, and labels it "Sample recipes". To use
+your own recipes (kept in the gitignored `private/data/`), open the app from the local
+server with `?library=private/data`, for example `http://localhost:8420/?library=private/data`.
+The format is explained in [data/library/README.md](data/library/README.md).
+
+Tests: `node tests/engine.test.js`, or open `tests/index.html` from the local server.
+Data check: `python scripts/check_data.py`.
+
 ## Opening this week's list fast
 
 Add `?list=<path>` to the URL and the app fetches that JSON on load instead of waiting for
