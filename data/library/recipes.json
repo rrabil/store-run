@@ -27,7 +27,7 @@
       ],
       "ingredients": [
         {
-          "name": "Chicken breasts",
+          "name": "Chicken breasts, boneless skinless",
           "quantity": 4,
           "unit": "lb",
           "scales": true,
@@ -314,7 +314,7 @@
           "group": ""
         },
         {
-          "name": "Yellow onion",
+          "name": "Yellow onions",
           "quantity": 1,
           "unit": null,
           "scales": true,

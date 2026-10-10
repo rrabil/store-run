@@ -14,6 +14,7 @@ import re
 import sys
 
 errors = []
+warnings = []
 
 
 def err(where, msg):
@@ -60,6 +61,19 @@ def check_routing(folder, r):
             err(where, "defaultSectionByStore: unknown store %r" % s)
         if sec not in secs:
             err(where, "defaultSectionByStore: unknown section %r" % sec)
+    for s, order in r.get("sectionOrderByStore", {}).items():
+        if s not in stores:
+            err(where, "sectionOrderByStore: unknown store %r" % s)
+        if not isinstance(order, list):
+            err(where, "sectionOrderByStore[%r] must be a list" % s)
+            continue
+        for sec in order:
+            if sec not in secs:
+                err(where, "sectionOrderByStore[%r]: unknown section %r" % (s, sec))
+        if len(set(order)) != len(order):
+            err(where, "sectionOrderByStore[%r] has duplicate sections" % s)
+    if not isinstance(r.get("checkStockNotes", {}), dict):
+        err(where, "checkStockNotes must be a name -> note mapping")
     for ex in r.get("exceptions", []):
         if ex.get("store") not in stores:
             err(where, "exception %r: unknown store %r" % (ex.get("item"), ex.get("store")))
@@ -150,12 +164,38 @@ def check_staples(folder, doc, stores, sections):
                     err(w, "season.until must be \"us-thanksgiving\" or a month/day")
 
 
+def name_key(n):
+    k = re.sub(r"[,(].*$", "", n.lower().strip()).strip()
+    return re.sub(r"(es|s)$", "", k)
+
+
+def warn_similar_names(folder, recipes, staples):
+    """Warn (not fail) when two spellings probably mean the same item.
+
+    The list generator merges items by exact name, so 'Lemon' and 'Lemons' would
+    show up as two separate lines instead of one combined line.
+    """
+    seen = {}
+    for r in (recipes or {}).get("recipes", []):
+        for g in r.get("ingredients", []):
+            seen.setdefault(name_key(g.get("name", "")), set()).add(g.get("name", ""))
+    for s in (staples or {}).get("staples", []):
+        seen.setdefault(name_key(s.get("name", "")), set()).add(s.get("name", ""))
+    for k, names in sorted(seen.items()):
+        if len(names) > 1:
+            warnings.append("%s: similar names will NOT merge on the list: %s"
+                            % (folder, " / ".join(sorted(names))))
+
+
 def check_folder(folder):
     print("Checking %s ..." % folder)
     routing = load(folder, "routing.json")
     stores, sections = check_routing(folder, routing)
-    check_recipes(folder, load(folder, "recipes.json"), stores, sections)
-    check_staples(folder, load(folder, "staples.json"), stores, sections)
+    recipes = load(folder, "recipes.json")
+    staples = load(folder, "staples.json")
+    check_recipes(folder, recipes, stores, sections)
+    check_staples(folder, staples, stores, sections)
+    warn_similar_names(folder, recipes, staples)
 
 
 def main():
@@ -169,6 +209,10 @@ def main():
             folders.append(priv)
     for f in folders:
         check_folder(f)
+    if warnings:
+        print("\n%d warning(s) (not failures; confirm these really are different items):" % len(warnings))
+        for w in warnings:
+            print("  - " + w)
     if errors:
         print("\n%d problem(s) found:" % len(errors))
         for e in errors:

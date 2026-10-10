@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Store Run engine tests</title>
+<style>
+  body{font:15px/1.5 system-ui,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;color:#1c1b19;background:#fbfaf7}
+  h1{font-size:1.3rem}
+  .sum{font-weight:600;margin:1rem 0}
+  .pass{color:#1f7a3a}.fail{color:#b3261e}
+  li{margin:.15rem 0;list-style:none}
+  pre{background:#f1efe9;padding:.5rem;border-radius:6px;white-space:pre-wrap}
+</style>
+</head>
+<body>
+<h1>Store Run list engine: tests</h1>
+<p>These run in your browser against <code>js/list-engine.js</code>. The same file also runs with <code>node tests/engine.test.js</code>.</p>
+<div class="sum" id="sum">Running...</div>
+<ul id="out"></ul>
+<script src="../js/list-engine.js"></script>
+<script src="engine.test.js"></script>
+<script>
+(function(){
+  var r = window.StoreRunTestReport;
+  var out = document.getElementById("out");
+  r.results.forEach(function(x){
+    var li = document.createElement("li");
+    li.className = x.ok ? "pass" : "fail";
+    li.textContent = (x.ok ? "PASS " : "FAIL ") + x.name;
+    if(x.detail){ var p = document.createElement("pre"); p.textContent = x.detail; li.appendChild(p); }
+    out.appendChild(li);
+  });
+  var s = document.getElementById("sum");
+  s.textContent = r.passed + " passed, " + r.failed + " failed";
+  s.className = "sum " + (r.failed ? "fail" : "pass");
+})();
+</script>
+</body>
+</html>

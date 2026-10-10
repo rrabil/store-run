@@ -12,6 +12,16 @@
     "Aldi": "OTHER",
     "H Mart": "ASIAN PANTRY"
   },
+  "sectionOrderByStore": {
+    "Lidl": ["PRODUCE", "BAKERY & BREAD", "DELI & SPECIALTY", "MEAT & SEAFOOD", "DAIRY & EGGS", "FROZEN", "BREAKFAST", "BAKING", "PASTA & GRAINS", "CANNED & JARRED", "OILS, SAUCES & CONDIMENTS", "SPICES & SEASONINGS", "SNACKS & NUTS", "BEVERAGES", "HOUSEHOLD", "OTHER"],
+    "Trader Joe's": ["PRODUCE", "BAKERY & BREAD", "DELI & SPECIALTY", "MEAT & SEAFOOD", "DAIRY & EGGS", "FROZEN", "BREAKFAST", "PASTA & GRAINS", "CANNED & JARRED", "OILS, SAUCES & CONDIMENTS", "SPICES & SEASONINGS", "BAKING", "SNACKS & NUTS", "BEVERAGES", "HOUSEHOLD", "OTHER"],
+    "Aldi": ["OTHER"],
+    "H Mart": ["ASIAN PANTRY", "OTHER"],
+    "Giant / Safeway": ["PRODUCE", "BAKERY & BREAD", "DELI & SPECIALTY", "MEAT & SEAFOOD", "DAIRY & EGGS", "FROZEN", "BAKING", "PASTA & GRAINS", "CANNED & JARRED", "OILS, SAUCES & CONDIMENTS", "SPICES & SEASONINGS", "BREAKFAST", "SNACKS & NUTS", "BEVERAGES", "BREAD & PACKAGED BAKERY", "HOUSEHOLD", "OTHER"]
+  },
+  "checkStockNotes": {
+    "Garlic": "check how much is left; buy a head of garlic if needed"
+  },
   "stores": [
     { "name": "Lidl", "role": "primary", "routeHere": ["Example: meat and seafood, pasta, bulk pantry items"] },
     { "name": "Trader Joe's", "role": "primary", "routeHere": ["Example: produce, dairy and eggs, frozen, canned goods, beverages"] },
